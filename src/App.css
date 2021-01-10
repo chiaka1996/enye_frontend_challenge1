@@ -108,3 +108,20 @@ nav form button:hover {
     text-align: center;
     margin-bottom: 1%;
 }
+
+.pagination {
+    text-align: center;
+    border-bottom: 2%;
+}
+
+.pagination span {
+    padding: 10px;
+    border: 1px solid #30CFE9;
+    margin-right: 1%;
+}
+
+.pagination span:hover {
+    background-color:  #30CFE9;
+    color: white;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './Components/navigation.js';
-import Record from './Components/Records.js';
+import Record from './Pages/Records.js';
 import './App.css';
 
 function App() {

@@ -1,10 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Pagination from '../Components/Pagination';
 import axios from 'axios';
 
 const Records = () => {
-
-    const [records, setRecords] = useState([]);
 
     const fetchRecord = () => {
         axios.get('http://api.enye.tech/v1/challenge/records')
@@ -14,16 +13,30 @@ const Records = () => {
             });
     }
 
+   
     useEffect(() => {  
        fetchRecord();
          },[]);
+
+    const [records, setRecords] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(20);
+    
+     //change current page
+     const changePage = pageNumber => {
+         setCurrentPage(pageNumber)     
+     }
+
+      //get current posts    
+      let indexOfLastPost = currentPage * postsPerPage;
+      let indexOfFirstPost = indexOfLastPost - postsPerPage;
+      let currentPost = records.slice(indexOfFirstPost, indexOfLastPost);
 
     return (
         <div>
         <div className="header_records"><span>TRANSACTION RECORDS</span></div>
         <div className="records_container">
-                {console.log(records)}
-                { records.map( (details,i) =>
+                { currentPost.map( (details,i) =>
                      <div className="records_item" key={i}>
                          <div className="name">{details.FirstName} {details.LastName}</div>
                         <ul>
@@ -45,6 +58,7 @@ const Records = () => {
                 }
                 
          </div>
+         <Pagination totalPost={records.length} postsPerPage={postsPerPage} changePages={changePage} />
          </div> 
     )
 }
