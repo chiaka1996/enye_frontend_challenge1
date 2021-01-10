@@ -14,8 +14,12 @@ const Navigation = () => {
                <div className='nav_filter'>
                 <select> 
                     <option value="filter">filter</option>
-                    <option value="gender">Gender</option>  
-                    <option value="payment method">Payment Method</option> 
+                    <option value="gender">Male</option>
+                    <option value="gender">Female</option>
+                    <option value="gender">check</option>
+                    <option value="gender">cc</option>
+                    <option value="gender">Money Order</option>  
+                    <option value="payment method">Paypal</option> 
                  </select>
                  </div>
             </nav>
