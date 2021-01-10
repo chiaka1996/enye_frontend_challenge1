@@ -6,7 +6,7 @@ import axios from 'axios';
 const Records = () => {
 
     const fetchRecord = () => {
-        axios.get('http://api.enye.tech/v1/challenge/records')
+        axios.get('https://api.enye.tech/v1/challenge/records')
         .then((res) => {
             let result = res.data.records.profiles;
             setRecords([...result]);
