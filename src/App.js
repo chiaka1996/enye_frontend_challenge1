@@ -3,8 +3,13 @@ import React, {useState, useEffect} from 'react';
 import Navigation from './Components/navigation.js';
 import Record from './Pages/Records.js';
 import Pagination from './Components/Pagination';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSearch} from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import './App.css';
+
+library.add(faSearch)
+
 
 function App() {
     const [initialRecord, setInitialRecord] = useState([]);
@@ -73,16 +78,10 @@ function App() {
 
     const recordSearch = () => {
       let search = searchInput.length === 0 ? initialRecord : records.filter(post =>  {
-        // let filteredArray = [];
         let fullName = post.FirstName + ' ' + post.LastName ;
 
        return fullName.toLowerCase().indexOf(searchInput.toLowerCase()) >= 0 ;
-      //  return filteredArray;
        });
-  
-       console.log(searchInput.length);
-       console.log(records)
-       console.log(search)
          
        setRecords([...search]);
     }

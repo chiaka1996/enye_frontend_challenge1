@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Navigation = ({changeFilter, changeSearchInput, searchInput}) => {
+
     const [textOption, setTextOption] = useState('filter');
+    const [showInput, setShowInput] = useState('false');
 
 
     const changeInput = e => {
@@ -10,10 +13,11 @@ const Navigation = ({changeFilter, changeSearchInput, searchInput}) => {
         changeFilter(value);
     }
     return (
+        <div>
         <div className="nav_header">
-            <nav>
+            <nav> 
                     <form>
-                    <input type="text" placeholder="Search" value={searchInput} onChange={(e)=> changeSearchInput(e.target.value)}/>
+                    <input type="text" placeholder="Search name" value={searchInput} onChange={(e)=> changeSearchInput(e.target.value)}/>
                     </form>
 
                     <div className="nav_flex"></div>
@@ -30,7 +34,14 @@ const Navigation = ({changeFilter, changeSearchInput, searchInput}) => {
                     <option value="paypal">PaymentMethod: paypal</option> 
                  </select>
                  </div>
+
+                 <div className="nav_flex2"></div>
+                 <div className="mobile_search" onClick={()=>setShowInput(!showInput)}><FontAwesomeIcon icon="search" size="lg" color="black"/></div>               
             </nav>
+        </div>
+        <form className= { showInput ? "form2" : "formShow"  }>
+        <input type="text" placeholder="Search name" value={searchInput} onChange={(e)=> changeSearchInput(e.target.value)}/>
+        </form>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Records = ({currentPost}) => {
     console.log(currentPost)
     return (
-        <div>
+        <div className="record_component">
         <div className="header_records"><span>TRANSACTION RECORDS</span></div>
         <div className="records_container">
                 { currentPost.map( (details,i) =>

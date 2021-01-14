@@ -1,4 +1,354 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+/* //mobile design */
+.nav_header {
+    background-color: #30CFE9;
+    width: 100%;
+    margin-bottom: 1%;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.nav_flex {
+    display:none;
+}
+
+nav form {
+    display: none;
+}
+
+.formShow {
+    display: block;
+    position: fixed;
+    margin: 0 2px 0 2px;
+    transition: transform 0.5s;
+    width: 96%;
+    z-index: 50;
+    transform: translateY(-2px);
+}
+
+.form2 {
+    top: 0; 
+    position: fixed;
+    display: block;
+    width: 96%;  
+    margin: 0 2px 0 2px;
+    transition: transform 0.5s;
+    transform: translateY(-20px);
+    z-index: 50;
+}
+
+.form2 input, .formShow input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid lightblue;
+}
+
+.nav_filter {
+    margin-right: 0px;
+    padding-top: 10px;
+}
+
+.nav_filter select {
+    height: 35px;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.nav_flex2 {
+    flex: 1;
+}
+
+.mobile_search {
+    margin-top: 5%;
+    margin-right: 4%;
+}
+
+select option{
+    color: black;
+    font-size: 15px;
+    width: 1%;
+}
+
+/* css for mobile record */
+.record_component {
+    margin-top: 18%;
+}
+.records_container {
+    margin: none;
+    padding: 3%;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.header_records {
+    font-family: 'Fredoka One';
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.header_records span {
+    border-bottom: 4px solid #1CA706;
+    border-radius: 50px;
+}
+
+.records_item {
+    /* height: 250px; */
+    background-color: white;
+    width: 100%;
+    border: 1px solid grey;
+    margin-right: 0px;
+    margin-bottom: 7%;
+    box-shadow: 5px 7px 5px 3px grey;
+    cursor: pointer;
+    transition: transform 0.5s;
+    border-radius: 10px;
+}
+
+.records_item:hover {
+    transform: translateY(-20px);
+}
+
+.records_item ul {
+    list-style-type: none;
+    padding: 0 0 0 3px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.records_item ul li {
+    margin-bottom: 3px;
+}
+
+.records_item ul li span {
+    font-family: 'Fredoka One';
+    color:   brown;
+}
+.name {
+    font-family: 'Fredoka One';
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.pagination {
+    text-align: center;
+    border-bottom: 4%;
+}
+
+.pagination span {
+    padding: 10px;
+    border: 1px solid #30CFE9;
+    margin-right: 1%;
+}
+
+.pagination span:hover {
+    background-color:  #30CFE9;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+    .nav_filter {
+        margin-right: 4px;
+        padding-top: 10px;
+    }
+    
+    .nav_filter select {
+        height: 45px;
+        border-radius: 2px;
+        font-size: 18px;
+    }
+    
+    .nav_flex2 {
+        flex: 1;
+    }
+    
+    .mobile_search {
+        margin-top: 3%;
+        margin-right: 4%;
+    }
+
+    .record_component {
+        margin-top: 10%;
+        font-size: 30px;
+    }
+
+    .form2 input, .formShow input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid lightblue;
+    }
+    
+}
+
+/* for ipad view */
+@media only screen and (min-width: 900px) and (max-width: 1300px) {
+    /* navigation css */
+.nav_header {
+    background-color: #30CFE9;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+nav {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav_flex {
+    display: block;
+    flex: 1;
+}
+
+.formShow {
+    display: none;
+}
+
+.form2 {
+    display: none;
+}
+
+nav form {
+    display: block;
+    width: 60%;
+    padding-left: 2%;
+    padding-top: 25px;
+}
+
+nav form input {
+ width: 70%;
+ height: 40px;
+ font-size: 25px;
+}
+
+.nav_filter {
+    margin-right: 3%;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.nav_flex2 {
+    display: none;
+    flex: 1;
+}
+
+.mobile_search {
+    display: none;
+    margin-top: 5%;
+    margin-right: 4%;
+}
+
+
+.nav_filter select {
+    height: 45px;
+    border-radius: 2px;
+    font-size: 18px;
+
+}
+
+select option{
+    color: black;
+    font-size: 15px;
+    width: 5%;
+}
+
+/* css for record */
+
+.record_component {
+    margin-top: 13%;
+    font-size: 30px;
+}
+
+.records_container {
+    
+    margin: 0.5% 0 3% 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.header_records {
+    font-family: 'Fredoka One';
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.header_records span {
+    border-bottom: 4px solid #1CA706;
+    border-radius: 50px;
+}
+
+.records_item {
+    /* height: 250px; */
+    background-color: white;
+    border: 1px solid grey;
+    width: 93%;
+    margin-right: 2%;
+    margin-bottom: 7%;
+    box-shadow: 5px 7px 5px 3px grey;
+    cursor: pointer;
+    transition: transform 0.5s;
+    border-radius: 10px;
+}
+
+.records_item:hover {
+    transform: translateY(-20px);
+}
+
+.records_item ul {
+    list-style-type: none;
+    padding: 0 0 0 3px;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.records_item ul li {
+    margin-bottom: 3px;
+}
+
+.records_item ul li span {
+    font-family: 'Fredoka One';
+    color:   brown;
+}
+.name {
+    font-family: 'Fredoka One';
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.pagination {
+    text-align: center;
+    border-bottom: 2%;
+}
+
+.pagination span {
+    padding: 10px;
+    border: 1px solid #30CFE9;
+    margin-right: 1%;
+}
+
+.pagination span:hover {
+    background-color:  #30CFE9;
+    color: white;
+    cursor: pointer;
+}
+}
+
+
+@media only screen and (min-width: 1302px) {
 /* navigation css */
 .nav_header {
     background-color: #30CFE9;
@@ -14,10 +364,20 @@ nav {
 }
 
 .nav_flex {
+    display: block;
     flex: 1;
 }
 
+.formShow {
+    display: none;
+}
+
+.form2 {
+    display: none;
+}
+
 nav form {
+    display: block;
     width: 40%;
     padding-left: 5%;
     padding-top: 10px;
@@ -28,29 +388,28 @@ nav form input {
  height: 30px;
 }
 
-nav form button {
-    width: 20%;
-    height: 37px;
-    background-color: #1CA706 ;
-    border: 1px solid  #1CA706;
-    margin-left: 2px;
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-nav form button:hover {
-    color: white;
-}
-
 .nav_filter {
     margin-right: 3%;
     padding-top: 10px;
 }
 
+.nav_flex2 {
+    display: none;
+    flex: 1;
+}
+
+.mobile_search {
+    display: none;
+    margin-top: 5%;
+    margin-right: 4%;
+}
+
+
 .nav_filter select {
     height: 35px;
     border-radius: 2px;
     font-size: 18px;
+
 }
 
 select option{
@@ -60,6 +419,11 @@ select option{
 }
 
 /* css for record */
+
+.record_component {
+    margin-top: 7%;
+}
+
 .records_container {
     
     margin: 0.5% 1% 3% 2%;
@@ -82,6 +446,7 @@ select option{
     /* height: 250px; */
     background-color: white;
     border: 1px solid grey;
+    width: 90%;
     margin-right: 7%;
     margin-bottom: 7%;
     box-shadow: 5px 7px 5px 3px grey;
@@ -130,4 +495,5 @@ select option{
     background-color:  #30CFE9;
     color: white;
     cursor: pointer;
+}
 }
