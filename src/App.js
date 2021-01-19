@@ -72,7 +72,6 @@ function App() {
 
     //change serch input
     const changeSearchInput = (input) => {
-      console.log(input);
         setSearchInput(input);
     }
 

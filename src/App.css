@@ -99,8 +99,16 @@ select option{
 }
 
 .header_records span {
-    border-bottom: 4px solid #1CA706;
+    border-bottom: 4px solid #30CFE9;
     border-radius: 50px;
+}
+
+.please_wait {
+    font-size: 20px;
+    font-family: 'Fredoka One';
+    color: #066DA7;
+    margin-top: 10%;
+    text-align: center;
 }
 
 .records_item {
@@ -114,6 +122,7 @@ select option{
     cursor: pointer;
     transition: transform 0.5s;
     border-radius: 10px;
+    color: black;
 }
 
 .records_item:hover {
@@ -133,7 +142,7 @@ select option{
 
 .records_item ul li span {
     font-family: 'Fredoka One';
-    color:   brown;
+    color: #066DA7;
 }
 .name {
     font-family: 'Fredoka One';
@@ -157,6 +166,15 @@ select option{
     color: white;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 500px) and (max-width: 620px) {
+    .mobile_search {
+        margin-top: 3%;
+        margin-right: 4%;
+    }
+
+}
+
 
 @media only screen and (min-width: 650px) and (max-width: 800px) {
     .nav_filter {
@@ -287,7 +305,7 @@ select option{
 }
 
 .header_records span {
-    border-bottom: 4px solid #1CA706;
+    border-bottom: 4px solid #30CFE9;
     border-radius: 50px;
 }
 
@@ -321,7 +339,7 @@ select option{
 
 .records_item ul li span {
     font-family: 'Fredoka One';
-    color:   brown;
+    color: #066DA7;
 }
 .name {
     font-family: 'Fredoka One';
@@ -438,7 +456,7 @@ select option{
 }
 
 .header_records span {
-    border-bottom: 4px solid #1CA706;
+    border-bottom: 4px solid #30CFE9;
     border-radius: 50px;
 }
 
@@ -472,7 +490,7 @@ select option{
 
 .records_item ul li span {
     font-family: 'Fredoka One';
-    color:   brown;
+    color: #066DA7;
 }
 .name {
     font-family: 'Fredoka One';

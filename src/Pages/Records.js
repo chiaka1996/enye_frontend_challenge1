@@ -5,6 +5,7 @@ const Records = ({currentPost}) => {
     return (
         <div className="record_component">
         <div className="header_records"><span>TRANSACTION RECORDS</span></div>
+        {currentPost.length < 1 ? <div className='please_wait'>Please wait...</div> : 
         <div className="records_container">
                 { currentPost.map( (details,i) =>
                      <div className="records_item" key={i}>
@@ -28,6 +29,7 @@ const Records = ({currentPost}) => {
                 }
                 
          </div>
+        }
          </div> 
     )
 }
